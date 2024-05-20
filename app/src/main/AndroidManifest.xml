@@ -13,6 +13,10 @@
         android:theme="@style/Theme.FbInstaUI"
         tools:targetApi="31">
         <activity
+            android:name=".features.home.HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FbInstaUI" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.FbInstaUI">

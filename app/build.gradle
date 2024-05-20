@@ -29,6 +29,13 @@ android {
     buildFeatures {
         viewBinding true
     }
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src\\main\\res', 'src\\main\\res\\commons', 'src\\main\\res\\2', 'src\\main\\res\\drawable\\commons', 'src\\main\\res\\drawable\\facebook_logins', 'src\\main\\res\\drawable\\instagram_login', 'src\\main\\res\\drawable\\facebook_login', 'src\\main\\res\\drawable\\ic_launcher', 'src\\main\\res\\drawable', 'src\\main\\res\\layout\\facebook_logins'
+            }
+        }
+    }
 }
 
 dependencies {
@@ -38,7 +45,11 @@ dependencies {
     implementation libs.constraintlayout
     implementation libs.navigation.fragment
     implementation libs.navigation.ui
+    implementation libs.activity
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+
 }

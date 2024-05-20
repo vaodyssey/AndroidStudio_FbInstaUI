@@ -1,6 +1,5 @@
-package com.example.fbinstaui;
+package com.example.fbinstaui.features.instagram;
 
-import android.hardware.Camera;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +8,9 @@ import android.widget.ImageButton;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.fragment.NavHostFragment;
+
+import com.example.fbinstaui.R;
+import com.example.fbinstaui.features.facebook.FacebookFragment;
 
 public class InstagramFragment extends Fragment {
     private ImageButton toFacebookUIButton;
