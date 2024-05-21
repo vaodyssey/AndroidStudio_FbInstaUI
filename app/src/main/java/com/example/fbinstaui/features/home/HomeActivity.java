@@ -2,6 +2,8 @@ package com.example.fbinstaui.features.home;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -14,6 +16,8 @@ import com.example.fbinstaui.R;
 
 public class HomeActivity extends AppCompatActivity {
     private TextView welcomeUserTextView;
+    private Button closeAppButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         this.welcomeUserTextView = (TextView)findViewById(R.id.hello_user_text_view);
+        InitializeCloseAppButton();
         GetBundles();
         EdgeToEdge.enable(this);
 
@@ -29,6 +34,17 @@ public class HomeActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    private void InitializeCloseAppButton(){
+        this.closeAppButton = (Button) findViewById(R.id.close_app_button);
+        closeAppButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.exit(0);
+                    }
+                }
+        );
     }
 
     private void GetBundles() {
